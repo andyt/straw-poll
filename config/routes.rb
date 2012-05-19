@@ -1,10 +1,9 @@
 Mysociety::Application.routes.draw do
 
   resources :voters
-
-  resource :votes
+  resources :votes
   
-  root :to => 'votes#new'
+  root :to => 'voters#new'
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
