@@ -1,0 +1,19 @@
+<%= simple_form_for(@vote) do |f| %>
+  <% if @vote.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@vote.errors.count, "error") %> stopped this vote from being saved:</h2>
+
+      <ul>
+      <% @vote.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.input :candidate, :collection => @candidates, :label_method => :name_and_party, :as => :radio_buttons -%>
+
+  <div class="actions">
+    <input type="submit" value="Register my vote" class="btn btn-success btn-large" />
+  </div>
+<% end %>
