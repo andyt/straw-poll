@@ -49,4 +49,5 @@ gem "bootstrap-sass", ">= 2.0.3"
 gem "simple_form"
 
 # Added by Andy
-gem "twfy", :git => "git@github.com:andyt/twfy.git"
+gem "twfy", :path => "vendor/gems/twfy"
+gem "seedbank"
