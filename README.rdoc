@@ -1,0 +1,20 @@
+== An example polling application to capture UK voter intention
+
+This Rails 3.2 application asks a UK voter their constituency and asks them their voting intention.
+
+The application then displays results for any chosen constituency, and for the nation as a whole.
+
+
+== Technical notes
+
+The application skeleton was created using the template specified below:
+
+    $ rails new mysociety -m https://github.com/RailsApps/rails3-application-templates/raw/master/rails3-mongoid-devise-template.rb -T -O
+
+and answering questions as required.
+
+
+== Limitations
+
+* There is no mechanism to determine repeat voting, as I considered this out-of-scope. Any solution (whether via cookies, or registration) could be easily circumvented by someone determined to bias results.
+
