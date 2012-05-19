@@ -133,10 +133,10 @@ GEM
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
-    seedbank (0.0.7)
     simple_form (2.0.2)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
+    spork (0.9.0)
     sprockets (2.1.3)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -171,7 +171,7 @@ DEPENDENCIES
   rails (= 3.2.1)
   rspec-rails (>= 2.10.1)
   sass-rails (~> 3.2.3)
-  seedbank
   simple_form
+  spork
   twfy!
   uglifier (>= 1.0.3)

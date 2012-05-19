@@ -50,4 +50,4 @@ gem "simple_form"
 
 # Added by Andy
 gem "twfy", :path => "vendor/gems/twfy"
-gem "seedbank"
+gem "spork"
