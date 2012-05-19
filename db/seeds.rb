@@ -28,3 +28,7 @@ CSV.open(Rails.root + 'db/seeds/constituencies.seeds.csv', :headers => true).eac
     end
   end
 end
+
+# For RailsAdmin
+User.destroy_all
+User.create!(:email => 'admin@example.com', :password => 'password')
