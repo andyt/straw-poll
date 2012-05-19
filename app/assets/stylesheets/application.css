@@ -11,3 +11,27 @@
  *= require_self
  *= require_tree .
 */
+
+
+body {
+	padding: 10em;
+}
+
+body h1 {
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 2em;
+}
+
+form {
+	padding: 2em;
+	background-color: #e7e7e7;
+}
+
+form label.control-label {
+	font-weight: bold;
+	font-size: 120%;
+}
+
+form .actions {
+	margin-top: 3em;
+}
