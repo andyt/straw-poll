@@ -8,4 +8,6 @@ class Constituency
   belongs_to :party
   has_many :candidates
 
+  alias_method :to_s, :name
+
 end

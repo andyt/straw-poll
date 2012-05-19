@@ -19,4 +19,7 @@ class Party
 
   has_many :candidates
   has_many :constituencies
+
+  alias_method :to_s, :name
+
 end
