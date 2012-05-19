@@ -45,9 +45,10 @@ gem "email_spec", ">= 1.2.1", :group => :test
 gem "bson_ext", ">= 1.6.2"
 gem "mongoid", ">= 2.4.10"
 gem "devise", ">= 2.1.0"
-gem "bootstrap-sass", ">= 2.0.3"
+gem "twitter-bootstrap-rails", :git => "git://github.com/seyhunak/twitter-bootstrap-rails.git"
 gem "simple_form"
 
 # Added by Andy
 gem "twfy", :path => "vendor/gems/twfy"
 gem "spork"
+gem "rails_admin"
