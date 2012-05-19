@@ -7,6 +7,10 @@ class Candidate
   belongs_to :party
 
   alias_method :to_s, :name
+
+  def name_and_party
+    "%s (%s)" % [name, party.name]
+  end
   
 end
 
