@@ -13,12 +13,14 @@
 	<li>Incorporate some maps</li>
 	<li>Postcode -> constituency lookup using the TWFY API / Ruby gem (forked and in vendor/gems ready for hacking!)</li>
 	<li>Nice colours for the parties</li>
+	<li>Optimise some of the results calculations - they're pretty slow</li>
 	<li>Make it a bit more fun!</li>
 </ul>
 
 <h3>Other points</h3>
 
 <ul>
+	<li><strong>Please excuse the slowness of the main results page - it's doing a lot of work!</strong> It could be optimised with a bit of work using a Mongo map-reduce function, or some caching.
 	<li>Specs are examples only really - the test coverage is minimal. I'd want specs in for all controller actions, and a couple of integration tests too.</li>
 	<li>Nationwide results don't count seats - just share of vote.</li>
 	<li>I've spent about 5.5 hours in this, including wrappping it all up, checking it in and doing this homepage.</li>
