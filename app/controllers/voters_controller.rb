@@ -13,7 +13,7 @@ class VotersController < ApplicationController
       if @voter.intends_to_vote?
         redirect_to new_vote_path
       else
-        redirect_to results_path
+        redirect_to @voter.constituency
       end
     else
       render action: "new"

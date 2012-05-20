@@ -10,13 +10,10 @@ class VotesController < ApplicationController
 
   def create
     @vote = Vote.new(params[:vote])
-
-    respond_to do |format|
-      if @vote.save
-        redirect_to results_path, notice: 'Your voting intention was successfully registered.'
-      else
-        render action: "new"
-      end
+    if @vote.save
+      redirect_to @vote.constituency, notice: 'Your voting intention was successfully registered.'
+    else
+      render action: "new"
     end
   end
 end
