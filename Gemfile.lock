@@ -177,9 +177,6 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.33)
-    uglifier (1.2.4)
-      execjs (>= 0.3.0)
-      multi_json (>= 1.0.2)
     warden (1.1.1)
       rack (>= 1.0)
 
@@ -188,7 +185,6 @@ PLATFORMS
 
 DEPENDENCIES
   bson_ext (>= 1.6.2)
-  coffee-rails (~> 3.2.1)
   database_cleaner (>= 0.7.2)
   devise (>= 2.1.0)
   email_spec (>= 1.2.1)
@@ -204,4 +200,3 @@ DEPENDENCIES
   simple_form
   spork
   twitter-bootstrap-rails!
-  uglifier (>= 1.0.3)
