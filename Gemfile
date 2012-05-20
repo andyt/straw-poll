@@ -49,6 +49,6 @@ gem "twitter-bootstrap-rails", :git => "git://github.com/seyhunak/twitter-bootst
 gem "simple_form"
 
 # Added by Andy
-gem "twfy", :path => "vendor/gems/twfy"
+#gem "twfy", :path => "vendor/gems/twfy" # Didn't have time to use this.
 gem "spork"
 gem "rails_admin"
