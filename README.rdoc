@@ -15,7 +15,7 @@ The application then displays results for any chosen constituency, and for the n
 
 Clone the app:
 
-   git clone ......
+   git clone git://github.com/andyt/straw-poll.git
 
 Install gems:
 
