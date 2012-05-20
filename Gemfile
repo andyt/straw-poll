@@ -45,7 +45,7 @@ gem "email_spec", ">= 1.2.1", :group => :test
 gem "bson_ext", ">= 1.6.2"
 gem "mongoid", ">= 2.4.10"
 gem "devise", ">= 2.1.0"
-gem "twitter-bootstrap-rails", :git => "git://github.com/seyhunak/twitter-bootstrap-rails.git"
+gem "twitter-bootstrap-rails", :git => "git://github.com/seyhunak/twitter-bootstrap-rails.git", :branch => "static"
 gem "simple_form"
 
 # Added by Andy
