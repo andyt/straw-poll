@@ -1,5 +1,9 @@
 require 'csv'
 
+# Tidying up
+Vote.destroy_all
+Voter.destroy_all
+
 Party.destroy_all
 Party::CODES.each do |code, name|
   Party.create!(
@@ -16,7 +20,8 @@ CSV.open(Rails.root + 'db/seeds/constituencies.seeds.csv', :headers => true).eac
     :pa_id => row['RefNo'],
     :name => row['Seat'],
     :region => row['Region'],
-    :party => party
+    :party => party,
+    :parameter => row['Seat'].parameterize
   )
 
   Party.all.each do |party|
@@ -32,3 +37,4 @@ end
 # For RailsAdmin
 User.destroy_all
 User.create!(:email => 'admin@example.com', :password => 'password')
+
