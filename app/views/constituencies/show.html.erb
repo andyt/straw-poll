@@ -1,0 +1,28 @@
+<h2>Poll results for <%= @constituency.name -%> constituency</h2>
+
+<p><strong>Total votes cast: <%= @constituency.vote_count -%></strong></p>
+
+<table class="table table-striped table-results">
+	<thead>
+		<tr>
+			<th>Candidate</th>
+			<th>Party</th>
+			<th>Votes</th>
+			<th>Share of vote</th>
+		</tr>
+	</thead>
+	<tbody>
+	<% @candidates.each do |candidate| -%>
+		<tr>
+			<td><%= candidate.name -%></td>
+			<td><%= candidate.party.name -%></td>
+			<td><%= candidate.votes.count -%></td>
+			<td><%= candidate.share_of_vote -%></td>
+		</tr>
+	<% end -%>
+	</tbody>
+</table>
+
+<hr />
+
+<%= render :partial => 'nav' -%>

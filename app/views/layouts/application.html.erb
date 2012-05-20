@@ -7,9 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<h1>The May Poll</h1>
 
-	<%= yield %>
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="brand" href="/">The May Poll</a>
+				<ul class="nav">
+					<li><a href="/">Home</a></li>
+					<li><a href="<%= new_voter_path -%>">Vote</a></li>
+					<li><a href="<%= constituencies_path -%>">Results</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div id="main">
+		<%= yield %>
+	</div>
 
 </body>
 </html>

@@ -1,18 +1,14 @@
+<% if @voter.errors.any? %>
+<div class="alert alert-error">
+  <button class="close" data-dismiss="alert">×</button>
+  Please correct the errors below.
+</div>
+<% end %>
+
 <%= simple_form_for(@voter) do |f| %>
-  <% if @voter.errors.any? %>
-    <div id="error_explanation">
-      <p><%= pluralize(@voter.errors.count, "error") %> prohibited this voter from being saved:</p>
 
-      <ul>
-      <% @voter.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <%= f.input :constituency_id, :collection => @constituencies, :label => 'Your constituency' -%>
-  <%= f.input :intends_to_vote, :as => :radio_buttons, :label => 'Do you intend to vote?' -%>
+  <%= f.input :constituency_id, :collection => @constituencies, :label => 'Your constituency', :required => true -%>
+  <%= f.input :intends_to_vote, :as => :radio_buttons, :label => 'Do you intend to vote?', :required => true -%>
 
   <div class="actions">
     <input type="submit" value="Next &raquo;" class="btn btn-large btn-success" />

@@ -1,0 +1,22 @@
+<p>
+View results for a constituency:
+</p>
+
+<ul class="nav nav-tabs">	
+<% active = 'active'; @grouped_constituencies.keys.each do |initial| -%>
+	<li class="<%= active -%>"><a href="#tab-<%= initial -%>" data-toggle="tab"><%= initial -%></a></li>
+<% active = nil; end -%>
+</ul>
+<div class="tab-content">
+<% active = 'active'; @grouped_constituencies.each do |initial, group| -%>
+	<div class="tab-pane <%= active -%>" id="tab-<%= initial -%>">
+		<ul class="nav nav-pills">
+		<% group.each do |constituency| -%>
+			<li class="active"><a href="<%= constituency_path(constituency) -%>"><%= constituency.name -%></a></li>
+		<% end -%>
+		</ul>
+	</div>
+<% active = nil; end -%>
+</div>
+
+or <a href="<%= constituencies_path -%>">view results for all constituencies</a>.

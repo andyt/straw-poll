@@ -1,0 +1,52 @@
+<h2>Nationwide seats by party</h2>
+
+<table class="table table-striped table-results">
+	<thead>
+		<tr>
+			<th>Party</th>
+			<th>Votes</th>
+			<th>Share of vote</th>
+		</tr>
+	</thead>
+	<tbody>
+	<% @parties.each do |party| -%>
+		<tr>
+			<td><%= party.name -%></td>
+			<td><%= party.vote_count -%></td>
+			<td><%= party.share_of_vote -%></td>
+		</tr>
+	<% end -%>
+	</tbody>
+</table>
+
+
+<h2>Poll results for all constituencies</h2>
+
+<p><strong>Total votes cast: <%= @vote_count -%></strong></p>
+
+<table class="table table-striped table-results">
+	<thead>
+		<tr>
+			<th>Constituency</th>
+			<th>Leading candidate</th>
+			<th>Incumbent</th>
+			<th>Votes cast</th>
+			<th>Abstaining voters</th>
+		</tr>
+	</thead>
+	<tbody>
+	<% @constituencies.each do |constituency| -%>
+		<tr>
+			<td><%= link_to constituency.name, constituency -%></td>
+			<td><%= constituency.leading_candidate.name_and_party rescue '-' -%></td>
+			<td><%= constituency.party.name -%></td>
+			<td><%= constituency.vote_count -%></td>
+			<td><%= constituency.voters_abstaining_count -%></td>
+		</tr>
+	<% end -%>
+	</tbody>
+</table>
+
+<hr />
+
+<%= render :partial => 'nav' -%>
