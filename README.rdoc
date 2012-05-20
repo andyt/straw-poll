@@ -5,6 +5,46 @@ This Rails 3.2 application asks a UK voter their constituency and asks them thei
 The application then displays results for any chosen constituency, and for the nation as a whole.
 
 
+== Dependencies
+
+* Ruby 1.9. This has been tested using Ruby 1.9.2-p290. There's a .rvmrc file in the root.
+* MongoDB running on localhost (or edit config/mongoid.yml).
+
+
+== Getting started
+
+Clone the app:
+
+   git clone ......
+
+Install gems:
+
+   bundle install
+
+Edit config/mongoid.yml if necessary, and seed the database:
+
+   rake db:seed
+
+Run the server:
+
+   rails s
+
+Connect to localhost in a browser.
+
+   http://localhost:3000
+
+If you'd like to poke around the seed data, RailsAdmin is mounted on /admin (user admin@example.com, password 'password'):
+
+   http://localhost:3000/admin
+
+
+== Running the tests
+
+Test coverage is limited to basic association tests on the models.
+
+   rspec spec/models/*.rb
+
+
 == Technical notes
 
 The application skeleton was created using the template specified below:
