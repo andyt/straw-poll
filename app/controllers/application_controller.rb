@@ -6,7 +6,8 @@ class ApplicationController < ActionController::Base
   protected
 
   def find_constituencies
-    @constituencies = Constituency.all
+    @constituencies = Constituency.includes(:party).all
+    @grouped_constituencies = @constituencies.group_by { |c| c.name.first }
   end
   
 end
