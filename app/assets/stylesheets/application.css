@@ -17,14 +17,18 @@ body {
 	padding: 10em;
 }
 
-body h1 {
-	border-bottom: 1px solid #ccc;
-	margin-bottom: 2em;
+#main {
+	margin-top: 4em;
 }
 
 form {
 	padding: 2em;
 	background-color: #e7e7e7;
+}
+
+#main h2, #main h3 {
+	margin-top: 2em;
+	margin-bottom: 0.5em;
 }
 
 form label.control-label {
@@ -34,4 +38,9 @@ form label.control-label {
 
 form .actions {
 	margin-top: 3em;
+}
+
+table.table-results {
+	margin: 3em auto;
+	width: 95%;
 }
